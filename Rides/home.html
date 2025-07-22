@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <img src="../imagenes/logoAventones.png" alt="Logo" class="logo logo-login" />
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li><a href="../Rides/home.html"  class="active">Home</a></li>
+            <li><a href="../Rides/myRides.html">Rides</a></li>
+            <li><a href="../Rides/booking.html">Bookings</a></li>
+        </ul>
+
+        <input type="search" placeholder="Search rides..." class="search-bar" />
+
+        <div class="dropdown">
+            <img src="../imagenes/user-icon.png" alt="User Icon" class="user-icon" />
+            <ul class="dropdown-menu">
+                <li><a href="../perfil/editar.html">Profile</a></li>
+                <li><a href="../perfil/configuracion.html">Settings</a></li>
+                <li><a href="../index.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <main>
+        <section class="titulos">
+            <h2 class="titles">Search rides</h2>
+        </section>
+
+        <div class="search-box">
+            <form action="myRides.html" method="GET" class="form-inline">
+                <div class="form-row">
+                    <label>From</label>
+                    <select name="from">
+                        <option>Quesada</option>
+                        <option>Aguas Zarcas</option>
+                    </select>
+
+                    <label>To</label>
+                    <select name="to">
+                        <option>Zarcero</option>
+                        <option>Alajuela</option>
+                    </select>
+
+                    <button class="my-button">Find rides</button>
+                </div>
+
+                <div class="form-row">
+                    <label>Days</label>
+                    <label><input type="checkbox" name="days[]" value="Mon" checked> Mon</label>
+                    <label><input type="checkbox" name="days[]" value="Tue" checked> Tue</label>
+                    <label><input type="checkbox" name="days[]" value="Wed" checked> Wed</label>
+                    <label><input type="checkbox" name="days[]" value="Thu" checked> Thu</label>
+                    <label><input type="checkbox" name="days[]" value="Fri" checked> Fri</label>
+                    <label><input type="checkbox" name="days[]" value="Sat" checked> Sat</label>
+                    <label><input type="checkbox" name="days[]" value="Sun" checked> Sun</label>
+                </div>
+            </form>
+        </div>
+
+        <div class="results">
+            <p>
+                Rides found from <strong><em>Quesada</em></strong> to <strong><em>Zarcero</em></strong>
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Driver</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Seats</th>
+                        <th>Car</th>
+                        <th>Fee</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="../imagenes/user-icon.png" class="user-icon" alt="User Icon"> YunMarti</td>
+                        <td><a href="#">Quesada</a></td>
+                        <td>Alajuela</td>
+                        <td>2</td>
+                        <td>Nissan Pathfinder 2015</td>
+                        <td>$5</td>
+                        <td><a href="details.html">Request</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../imagenes/user-icon.png" class="user-icon" alt="User Icon"> Nabarca</td>
+                        <td><a href="#">Quesada</a></td>
+                        <td>Naranjo</td>
+                        <td>1</td>
+                        <td>Toyota Corolla 2020</td>
+                        <td>$10</td>
+                        <td><a href="details.html">Request</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../imagenes/user-icon.png" class="user-icon" alt="User Icon"> Maricu</td>
+                        <td><a href="#">Aguas Zarcas</a></td>
+                        <td>Naranjo</td>
+                        <td>1</td>
+                        <td>Ford Festiva 1990</td>
+                        <td>--</td>
+                        <td><a href="details.html">Request</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="map-box">
+            <img src="../imagenes/imgMapa.png" alt="Map" class="map-img" />
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            <a href="home.html">Home</a> |
+            <a href="myRides.html">Rides</a> |
+            <a href="bookings.html">Bookings</a> |
+            <a href="../perfil/configuracion.html">Settings</a> |
+            <a href="../index.html">Login</a> |
+            <a href="../perfil/registro.html">Register</a>
+        </p>
+        <p>© Aventones.com</p>
+    </footer>
+
+</body>
+
+</html>

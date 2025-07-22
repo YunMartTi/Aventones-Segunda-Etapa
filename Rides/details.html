@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ride Details</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <img src="../imagenes/logoAventones.png" alt="Logo" class="logo logo-login" />
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li><a href="../Rides/home.html">Home</a></li>
+            <li><a href="../Rides/myRides.html" class="active">Rides</a></li>
+            <li><a href="../Rides/booking.html">Bookings</a></li>
+        </ul>
+
+        <input type="search" placeholder="Search rides..." class="search-bar" />
+
+        <div class="dropdown">
+            <img src="../imagenes/user-icon.png" alt="User Icon" class="user-icon" />
+            <ul class="dropdown-menu">
+                <li><a href="../perfil/configuracion.html">Settings</a></li>
+                <li><a href="../index.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="ride-details-container">
+            <h2 class="titles">Ride Details</h2>
+
+            <div class="profile-section">
+                <img src="../imagenes/user-icon.png" alt="User" class="user-icon">
+                <p class="username">YunMarTi</p>
+            </div>
+
+            <form action="myRides.html" method="GET">
+                <div class="location-row">
+                    <div>
+                        <label>Departure from</label>
+                        <strong>Quesada</strong>
+                    </div>
+                    <div>
+                        <label>Arrive To</label>
+                        <strong>Zarcero</strong>
+                    </div>
+                </div>
+
+                <div class="days-row">
+                    <label>Days</label>
+                    <label><input type="checkbox" name="days[]" value="Mon" checked> Mon</label>
+                    <label><input type="checkbox" name="days[]" value="Tue" checked> Tue</label>
+                    <label><input type="checkbox" name="days[]" value="Wed" checked> Wed</label>
+                    <label><input type="checkbox" name="days[]" value="Thu" checked> Thu</label>
+                    <label><input type="checkbox" name="days[]" value="Fri" checked> Fri</label>
+                    <label><input type="checkbox" name="days[]" value="Sat" checked> Sat</label>
+                    <label><input type="checkbox" name="days[]" value="Sun" checked> Sun</label>
+                </div>
+
+                <div class="inputs-row">
+                    <div>
+                        <label>Time</label>
+                        <input type="time" name="time" value="10:00">
+                    </div>
+                    <div>
+                        <label>Seats</label>
+                        <input type="number" name="seats" min="1" value="2">
+                    </div>
+                    <div>
+                        <label>Fee</label>
+                        <input type="number" name="fee" min="0" value="15">
+                    </div>
+                </div>
+
+                <div class="vehicle-box">
+                    <label>Vehicle Details</label>
+                    <div class="vehicle-row">
+                        <div>
+                            <label>Make</label>
+                            <input list="car-makes" name="make" value="Nissan">
+                            <datalist id="car-makes">
+                                <option value="Nissan">
+                                <option value="Toyota">
+                                <option value="Hyundai">
+                                <option value="Kia">
+                            </datalist>
+                        </div>
+
+                        <div>
+                            <label>Model</label>
+                            <input type="text" name="model" value="March">
+                        </div>
+
+                        <div>
+                            <label>Year</label>
+                            <input type="number" name="year" value="2020">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="buttons-row">
+                    <a href="home.html" class="cancel-link">Cancel</a>
+                    <button class="my-button">Request</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            <a href="home.html">Home</a> |
+            <a href="myRides.html">Rides</a> |
+            <a href="bookings.html">Bookings</a> |
+            <a href="../perfil/configuracion.html">Settings</a> |
+            <a href="../index.html">Login</a> |
+            <a href="../perfil/registro.html">Register</a>
+        </p>
+        <p>© Aventones.com</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>My Rides</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+    <img src="../imagenes/logoAventones.png" alt="Logo" class="logo logo-login" />
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="myRides.html" class="active">Rides</a></li>
+            <li><a href="booking.html">Bookings</a></li>
+        </ul>
+
+        <input type="search" placeholder="Search rides..." class="search-bar" />
+
+        <div class="dropdown">
+            <img src="../imagenes/user-icon.png" alt="User Icon" class="user-icon" />
+            <ul class="dropdown-menu">
+                <li><a href="../perfil/editar.html">Profile</a></li>
+                <li><a href="../perfil/configuracion.html">Settings</a></li>
+                <li><a href="../index.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <p class="titles">My Rides</p>
+        <br>
+        <a href="add.html" class="my-button margin-left-60">New Ride</a>
+
+        <br><br>
+        <div class="content-wrapper">
+            <table class="bookings">
+                <thead>
+                    <tr>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Seats</th>
+                        <th>Car</th>
+                        <th>Fee</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="details.html">Pital</a></td>
+                        <td>Ciudad Quesada</td>
+                        <td>3</td>
+                        <td>Toyota Corolla</td>
+                        <td>$5.00</td>
+                        <td>
+                            <p><a href="edit.html">Edit</a> | <a href="#">Delete</a></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            <a href="home.html">Home</a> |
+            <a href="myRides.html">Rides</a> |
+            <a href="bookings.html">Bookings</a> |
+            <a href="../perfil/configuracion.html">Settings</a> |
+            <a href="Rides/home.html">Login</a> |
+            <a href="../perfil/register.html">Register</a>
+        </p>
+        <p>© Aventones.com</p>
+    </footer>
+
+</body>
+</html>

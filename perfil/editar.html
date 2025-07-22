@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+<img src="../imagenes/logoAventones.png" alt="Logo" class="logo logo-login" />
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li><a href="../Rides/home.html">Home</a></li>
+            <li><a href="../Rides/myRides.html" class="active">Rides</a></li>
+            <li><a href="../Rides/bookings.html">Bookings</a></li>
+        </ul>
+
+        <input type="search" placeholder="Search rides..." class="search-bar" />
+
+        <div class="dropdown">
+            <img src="../imagenes/user-icon.png" alt="User Icon" class="user-icon" />
+            <ul class="dropdown-menu">
+                <li><a href="editar.html">Profile</a></li>
+                <li><a href="configuracion.html">Settings</a></li>
+                <li><a href="../index.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="titulos">
+        <p class="titles">Edit Profile</p>
+
+        <form class="form-container" method="POST" action="editProfile.html">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" value="Yunior" />
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" value="Martínez" />
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label>Email</label>
+                <input type="email" value="mrtn1806@gmail.com" />
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" />
+                </div>
+                <div class="form-group">
+                    <label>Repeat Password</label>
+                    <input type="password" />
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label>Address</label>
+                <input type="text" value="NA" />
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Country</label>
+                    <select>
+                        <option>-- Select --</option>
+                        <option>USA</option>
+                        <option selected>Costa Rica</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>State</label>
+                    <input type="text" value="Alajuela" />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" value="Quesada" />
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="text" value="61065116" />
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <a href="myRides.html">Cancel</a>
+                <button class="my-button">Save</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>
+            <a href="../Rides/home.html">Home</a> |
+            <a href="../Rides/myRides.html">Rides</a> |
+            <a href="../Rides/bookings.html">Bookings</a> |
+            <a href="configuracion.html">Settings</a> |
+            <a href="../index.html">Login</a> |
+            <a href="../perfil/registro.html">Register</a>
+        </p>
+        <p>© Aventones.com</p>
+    </footer>
+</body>
+
+</html>

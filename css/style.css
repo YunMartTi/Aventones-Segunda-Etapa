@@ -1,0 +1,552 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.titles {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  border-bottom: 2px solid #969697;
+  display: inline-block;
+}
+
+/* --------------------> Barra de navegacion <-------------------- */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* CENTRAR TODO */
+  gap: 40px; /* espacio entre los elementos */
+  background-color: #f8f8f8;
+  padding: 10px 20px;
+}
+
+/* Menú horizontal */
+.navbar-menu {
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Links del menú */
+.navbar-menu li a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #555;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navbar-menu li a:hover,
+.navbar-menu li a.active {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+/* Barra de búsqueda con ancho fijo */
+.search-bar {
+  width: 300px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-left: 180px;
+}
+
+/* Dropdown usuario */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Icono usuario */
+.user-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 15px;
+  background-color: #fff;
+  border: 1px solid #000;
+  list-style: none;
+  padding: 5px 0;
+  width: 150px;
+  z-index: 1000;
+}
+
+
+.dropdown-menu li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Mostrar menú al hacer hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+/* --------------------> Imagenes <-------------------- */
+
+.logo {
+  padding: 20px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.logo-login {
+  margin-bottom: 50px;
+}
+
+.google-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.user-icon {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 5px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.map-img {
+  width: 100%;
+  height: 200px;
+  background-color: #e0e0e0;
+  object-fit: cover;
+}
+
+/* --------------------> Tablas y contenedores <-------------------- */
+
+table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 70%;
+  margin: auto;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* --------------------> Login <-------------------- */
+
+.login-container {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 40px;
+  border: 2px solid #007bff;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.labels {
+  margin-right: 41%;
+}
+
+.login-container h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------> Formularios y contenedores <-------------------- */
+
+.form-row {
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+.form-clean {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+  padding: 20px 0;
+}
+
+.form-clean .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-clean .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-clean .form-group label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-clean .form-group input,
+.form-clean .form-group textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.full-width {
+  width: 97%;
+}
+
+.full-width input {
+  width: 100%;
+}
+
+/*--------------------> Footer para formularios <-------------------- */
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.form-footer a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+.margin-left-60 {
+  text-decoration: none;
+  margin-left: 60%;
+}
+
+/* --------------------> Botones <-------------------- */
+
+.my-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.my-button:hover {
+  background-color: #2980b9;
+}
+
+.add-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+.add-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Vista detalles rides */
+
+.ride-details-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+.profile-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.location-row,
+.inputs-row,
+.vehicle-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.vehicle-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.days-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.buttons-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.submit-btn {
+  background-color: #1a73e8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* FIN Vista details */
+
+
+/* Vista Home */
+
+.titulos h2 {
+  font-size: 30px;
+  color: #444;
+  margin-bottom: 0;
+}
+
+.titulos h1 {
+  width: 200px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+}
+
+.search-box {
+  border: 1px solid #333;
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.form-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.form-inline select,
+.form-inline button {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.days-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.results {
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
+}
+
+.results table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.results th,
+.results td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.results th {
+  background-color: #f2f2f2;
+}
+
+.results td a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.results td a:hover {
+  text-decoration: underline;
+}
+
+.map-box {
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+
+/* Fin vista Home */
+
+
+/*FOOTER*/
+
+.site-footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  border-top: 1px solid #ddd;
+  margin-top: auto;
+}
+
+.site-footer a {
+  color: #080808;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* FIN FOOTER */
+
+
+.content-wrapper {
+  margin-bottom: 250px;
+}
+
+/* --------------------> Responsividad <-------------------- */
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+}

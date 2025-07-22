@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookings</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+    <img src="../imagenes/logoAventones.png" alt="Logo" class="logo logo-login" />
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="myRides.html">Rides</a></li>
+            <li><a href="booking.html" class="active">Bookings</a></li>
+        </ul>
+
+        <input type="search" placeholder="Search rides..." class="search-bar" />
+
+        <div class="dropdown">
+            <img src="../imagenes/user-icon.png" alt="User Icon" class="user-icon" />
+            <ul class="dropdown-menu">
+                <li><a href="../perfil/configuracion.html">Settings</a></li>
+                <li><a href="../index.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <p class="titles">Bookings</p>
+
+        <div class="content-wrapper">
+            <table class="bookings">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Ride</th>
+                        <th>Accept / Reject</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Yunior Martinez</td>
+                        <td>Pital - Ciudad Quesada</td>
+                        <td>
+                            <a href="#">Accept</a> |
+                            <a href="#">Reject</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            <a href="home.html">Home</a> |
+            <a href="myRides.html">Rides</a> |
+            <a href="bookings.html">Bookings</a> |
+            <a href="../perfil/configuracion.html">Settings</a> |
+            <a href="../index.html">Login</a> |
+            <a href="../perfil/registro.html">Register</a>
+        </p>
+        <p>© Aventones.com</p>
+    </footer>
+</body>
+</html>
