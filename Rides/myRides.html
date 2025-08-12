@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <title>My Rides</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/rides.js" defer></script>
+    <script src="../js/mostrarRides.js" defer></script>
+
 </head>
 <body>
 
@@ -14,7 +17,7 @@
         <ul class="navbar-menu">
             <li><a href="home.html">Home</a></li>
             <li><a href="myRides.html" class="active">Rides</a></li>
-            <li><a href="booking.html">Bookings</a></li>
+            <li><a href="bookings.html">Bookings</a></li>
         </ul>
 
         <input type="search" placeholder="Search rides..." class="search-bar" />
@@ -46,17 +49,8 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="details.html">Pital</a></td>
-                        <td>Ciudad Quesada</td>
-                        <td>3</td>
-                        <td>Toyota Corolla</td>
-                        <td>$5.00</td>
-                        <td>
-                            <p><a href="edit.html">Edit</a> | <a href="#">Delete</a></p>
-                        </td>
-                    </tr>
+                <tbody id="ridesTableBody">
+                    <!-- Se llenará con JS -->
                 </tbody>
             </table>
         </div>

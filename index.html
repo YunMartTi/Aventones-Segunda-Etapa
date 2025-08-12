@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Aventones</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/validador.js"></script>
+
 </head>
 
 <body>
@@ -19,11 +21,11 @@
                 <p><strong>Or</strong></p>
             </section>
 
-            <form action="Rides/home.html" method="GET">
+            <form id="login_form">
                 <p class="labels">Username</p>
-                <input type="text" name="username" id="username" />
+                <input type="text" name="username" id="login_email"/>
                 <p class="labels">Password</p>
-                <input type="password" name="password" id="password" />
+                <input type="password" name="password" id="login_password" />
                 <br />
                 <p>Not a user? <a href="perfil/registro.html">Register Now</a></p>
                 <button class="my-button">Login</button>

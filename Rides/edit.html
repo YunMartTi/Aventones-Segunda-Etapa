@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Edit Ride</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/rides.js" defer></script>
 </head>
+
 <body>
 
     <img src="../imagenes/logoAventones.png" alt="Logo" class="logo logo-login" />
@@ -30,7 +33,7 @@
     </nav>
 
     <p class="titles">Edit Ride</p>
-    <form action="bookings.html" method="GET" class="form-container">
+    <form id="editRideForm" class="form-container">
         <div class="form-row">
             <div class="form-group">
                 <label>Departure from</label>
@@ -100,7 +103,7 @@
 
         <div class="form-footer">
             <a href="myRides.html">Cancel</a>
-            <button class="my-button">Save</button>
+            <button class="my-button" type="submit">Save</button>
         </div>
     </form>
 
@@ -118,4 +121,5 @@
     </footer>
 
 </body>
+
 </html>

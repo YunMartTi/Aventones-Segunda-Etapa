@@ -13,7 +13,7 @@
     <!-- Navbar -->
     <nav class="navbar">
         <ul class="navbar-menu">
-            <li><a href="../Rides/home.html"  class="active">Home</a></li>
+            <li><a href="../Rides/home.html" class="active">Home</a></li>
             <li><a href="../Rides/myRides.html">Rides</a></li>
             <li><a href="../Rides/booking.html">Bookings</a></li>
         </ul>
@@ -30,29 +30,27 @@
         </div>
     </nav>
 
-
-
     <main>
         <section class="titulos">
             <h2 class="titles">Search rides</h2>
         </section>
 
         <div class="search-box">
-            <form action="myRides.html" method="GET" class="form-inline">
+            <form class="form-inline" id="searchForm">
                 <div class="form-row">
                     <label>From</label>
-                    <select name="from">
+                    <select name="from" id="fromSelect">
                         <option>Quesada</option>
                         <option>Aguas Zarcas</option>
                     </select>
 
                     <label>To</label>
-                    <select name="to">
+                    <select name="to" id="toSelect">
                         <option>Zarcero</option>
                         <option>Alajuela</option>
                     </select>
 
-                    <button class="my-button">Find rides</button>
+                    <button type="submit" class="my-button">Find rides</button>
                 </div>
 
                 <div class="form-row">
@@ -69,10 +67,7 @@
         </div>
 
         <div class="results">
-            <p>
-                Rides found from <strong><em>Quesada</em></strong> to <strong><em>Zarcero</em></strong>
-            </p>
-
+            <p id="resultsSummary"></p>
             <table>
                 <thead>
                     <tr>
@@ -85,34 +80,8 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td><img src="../imagenes/user-icon.png" class="user-icon" alt="User Icon"> YunMarti</td>
-                        <td><a href="#">Quesada</a></td>
-                        <td>Alajuela</td>
-                        <td>2</td>
-                        <td>Nissan Pathfinder 2015</td>
-                        <td>$5</td>
-                        <td><a href="details.html">Request</a></td>
-                    </tr>
-                    <tr>
-                        <td><img src="../imagenes/user-icon.png" class="user-icon" alt="User Icon"> Nabarca</td>
-                        <td><a href="#">Quesada</a></td>
-                        <td>Naranjo</td>
-                        <td>1</td>
-                        <td>Toyota Corolla 2020</td>
-                        <td>$10</td>
-                        <td><a href="details.html">Request</a></td>
-                    </tr>
-                    <tr>
-                        <td><img src="../imagenes/user-icon.png" class="user-icon" alt="User Icon"> Maricu</td>
-                        <td><a href="#">Aguas Zarcas</a></td>
-                        <td>Naranjo</td>
-                        <td>1</td>
-                        <td>Ford Festiva 1990</td>
-                        <td>--</td>
-                        <td><a href="details.html">Request</a></td>
-                    </tr>
+                <tbody id="resultsBody">
+                    <!-- Aquí se insertan los resultados -->
                 </tbody>
             </table>
         </div>
@@ -134,6 +103,7 @@
         <p>© Aventones.com</p>
     </footer>
 
+    <script src="../js/rides.js"></script>
 </body>
 
 </html>
