@@ -20,10 +20,11 @@ function storeInputs() {
     const city = document.getElementById('city').value;
     const number = document.getElementById('number').value;
     const role = document.getElementById('role').value;
-    const brand = document.getElementById('brand').value;
-    const model = document.getElementById('model').value;
-    const year = document.getElementById('year').value;
-    const id = document.getElementById('id').value;
+    const brand = document.getElementById('brand') ? document.getElementById('brand').value : null;
+    const model = document.getElementById('model') ? document.getElementById('model').value : null;
+    const year = document.getElementById('year') ? document.getElementById('year').value : null;
+    const id = document.getElementById('id') ? document.getElementById('id').value : null;
+
 
     if (password !== password2) {
         alert('Passwords do not match. Please try again.');
@@ -68,7 +69,7 @@ function storeInputs() {
             state,
             city,
             number,
-            role
+            role,
         };
     }
 

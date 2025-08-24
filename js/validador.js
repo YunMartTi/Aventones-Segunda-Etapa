@@ -17,12 +17,12 @@ function loginUser() {
     if (userFound) {
     sessionStorage.setItem('loggedInUser', JSON.stringify(userFound));
 
-    alert(`Welcome ${userFound.fName} (${userFound.role})`);
-
     if (userFound.role === 'driver') {
         window.location.href = "Rides/home.html";
     } else {
         window.location.href = "Rides/home.html";
+        document.getElementById("myRidesLink").style.display = "none";
+
     }
 }
 

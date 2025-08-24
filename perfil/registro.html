@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>User Registration</title>
     <link rel="stylesheet" href="../css/style.css" />
-        <script src="../js/userRegistration.js"></script>
+    <script src="../js/userRegistration.js"></script>
 
 </head>
+
 <body>
-   <img src="../imagenes/logoAventones.png" alt="Logo" class="logo logo-login" />
+    <img src="../imagenes/logoAventones.png" alt="Logo" class="logo logo-login" />
 
     <main>
         <p class="titles">User Registration</p>
@@ -16,39 +18,51 @@
             <div class="form-row">
                 <div class="form-group">
                     <label>First Name</label>
-                    <input type="text" />
+                    <input type="text" id="fName" />
                 </div>
                 <div class="form-group">
                     <label>Last Name</label>
-                    <input type="text" />
+                    <input type="text" id="lName" />
                 </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>ID</label>
+                    <input type="text" id="cedula" />
+                </div>
+                <div class="form-group">
+                    <label>Birthday</label>
+                    <input type="date" id="birthday" name="birthday" required />
+                </div>
+
             </div>
 
             <div class="form-group full-width">
                 <label>Email</label>
-                <input type="email" />
+                <input type="email" id="email" />
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label>Password</label>
-                    <input type="password" />
+                    <input type="password" id="password" />
                 </div>
                 <div class="form-group">
                     <label>Repeat Password</label>
-                    <input type="password" />
+                    <input type="password" id="password2" />
                 </div>
             </div>
 
             <div class="form-group full-width">
                 <label>Address</label>
-                <input type="text" />
+                <input type="text" id="address" />
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label>Country</label>
-                    <select>
+                    <select id="country">
                         <option>-- Select --</option>
                         <option>USA</option>
                         <option>Costa Rica</option>
@@ -56,21 +70,22 @@
                 </div>
                 <div class="form-group">
                     <label>State</label>
-                    <input type="text" />
+                    <input type="text" id="state" />
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label>City</label>
-                    <input type="text" />
+                    <input type="text" id="city" />
                 </div>
                 <div class="form-group">
                     <label>Phone Number</label>
-                    <input type="text" />
+                    <input type="text" id="number" />
                 </div>
+                <input type="hidden" id="role" value="user">
             </div>
-
+            <button class="my-button" type="submit">Sign up</button>
             <div class="form-footer">
                 <p>Already a user? <a href="login.html">Login here</a></p>
                 <p>Register as driver? <a href="registroConductor.html">Click here</a></p>
@@ -90,4 +105,5 @@
         <p>© Aventones.com</p>
     </footer>
 </body>
+
 </html>

@@ -84,43 +84,42 @@ function loadUserRides() {
   const tbody = document.getElementById('ridesTableBody');
   tbody.innerHTML = '';
 
+  // Filtra solo los rides del usuario logueado
   const userRides = rides.filter(ride => ride.userEmail === loggedInUser.email);
 
   if (userRides.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;">No rides found</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;">No rides found</td></tr>`;
     return;
   }
 
-  userRides.forEach(ride => {
+  userRides.forEach((ride, index) => {
     const tr = document.createElement('tr');
 
-    const fromTd = document.createElement('td');
+    // Asegurarse que el orden de td coincide con el thead
+    const fromTd = document.createElement('td');   // 1
     fromTd.textContent = ride.origin;
     tr.appendChild(fromTd);
 
-    const toTd = document.createElement('td');
+    const toTd = document.createElement('td');     // 2
     toTd.textContent = ride.destination;
     tr.appendChild(toTd);
 
-    const seatsTd = document.createElement('td');
-    seatsTd.textContent = ride.seats;
-    tr.appendChild(seatsTd);
-
-    const carTd = document.createElement('td');
-    carTd.textContent = `${ride.vehicle.marcas} ${ride.vehicle.model} ${ride.vehicle.year}`;
-    tr.appendChild(carTd);
-
-    const feeTd = document.createElement('td');
+    const feeTd = document.createElement('td');    // 3
     feeTd.textContent = `$${parseFloat(ride.fee).toFixed(2)}`;
     tr.appendChild(feeTd);
 
-    const actionsTd = document.createElement('td');
+    const seatsTd = document.createElement('td');  // 4
+    seatsTd.textContent = ride.seats;
+    tr.appendChild(seatsTd);
 
-    const ridesAll = JSON.parse(localStorage.getItem('rides')) || [];
-    const globalIndex = ridesAll.findIndex(r => r === ride);
+    const carTd = document.createElement('td');    // 5
+    carTd.textContent = `${ride.vehicle.marcas} ${ride.vehicle.model} ${ride.vehicle.year}`;
+    tr.appendChild(carTd);
+
+    const actionsTd = document.createElement('td'); // 6
 
     const editLink = document.createElement('a');
-    editLink.href = `edit.html?rideIndex=${globalIndex}`;
+    editLink.href = `edit.html?rideIndex=${index}`; // usar index directo
     editLink.textContent = 'Edit';
 
     const deleteLink = document.createElement('a');
@@ -130,8 +129,9 @@ function loadUserRides() {
     deleteLink.addEventListener('click', (e) => {
       e.preventDefault();
       if (confirm('Are you sure you want to delete this ride?')) {
-        ridesAll.splice(globalIndex, 1);
-        localStorage.setItem('rides', JSON.stringify(ridesAll));
+        // Eliminar del localStorage
+        rides.splice(index, 1);
+        localStorage.setItem('rides', JSON.stringify(rides));
         loadUserRides();
       }
     });
@@ -144,6 +144,7 @@ function loadUserRides() {
     tbody.appendChild(tr);
   });
 }
+
 
 // Carga ride para editar y guarda cambios
 function loadRideForEdit() {
@@ -294,7 +295,10 @@ function setupSearchForm() {
           <td>${ride.seats}</td>
           <td>${ride.vehicle.marcas} ${ride.vehicle.model} ${ride.vehicle.year}</td>
           <td>$${parseFloat(ride.fee).toFixed(2)}</td>
-          <td><a href="details.html">Request</a></td>
+          <td>
+            <a href="details.html?rideIndex=${rides.indexOf(ride)}">Details</a> | 
+            <a href="details.html?rideIndex=${rides.indexOf(ride)}">Request</a>
+          </td>
         </tr>`;
       });
 

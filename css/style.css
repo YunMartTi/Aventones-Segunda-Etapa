@@ -19,8 +19,10 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: center; /* CENTRAR TODO */
-  gap: 40px; /* espacio entre los elementos */
+  justify-content: center;
+  /* CENTRAR TODO */
+  gap: 40px;
+  /* espacio entre los elementos */
   background-color: #f8f8f8;
   padding: 10px 20px;
 }
@@ -527,9 +529,14 @@ h2 {
   margin-bottom: 250px;
 }
 
+.navbar-toggle {
+  display: none;
+}
+
 /* --------------------> Responsividad <-------------------- */
 
 @media (max-width: 600px) {
+
   .form-row {
     flex-direction: column;
   }
@@ -541,12 +548,127 @@ h2 {
     text-align: center;
   }
 
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-menu li a {
+    font-size: 10px;
+    text-decoration: none;
+    color: #555;
+    padding: 4px 6px;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+  }
+
   .navbar-menu {
+    display: none;
     flex-direction: column;
     gap: 10px;
   }
 
-  .search-bar {
-    width: 100%;
+  .navbar-menu.open {
+    display: flex;
   }
+
+  .search-bar {
+    display: none;
+  }
+
+  .search-box {
+    border: 1px solid #333;
+    padding: 15px;
+    width: 320px;
+    margin: 15px auto;
+    text-align: left;
+  }
+
+  .results table {
+    width: 90%;
+    border-collapse: collapse;
+  }
+
+  .results thead {
+    background: #f5f5f5;
+  }
+
+  .results th,
+  .results td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  .results tr {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    margin-bottom: 1rem;
+  }
+
+  .results td {
+    display: flex;
+    flex-direction: column;
+    /* encabezado arriba, info abajo */
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .results td::before {
+    content: attr(data-label);
+    /* se usa el mismo label */
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+
+  /* Si no quieres mostrar el <thead> en móvil 
+  .results thead {
+    display: none;
+  }
+*/
+  .map-box iframe {
+    width: 80%;
+    height: 250px;
+    /* más pequeño en móviles */
+    border-radius: 8px;
+  }
+
+  .results thead th:nth-child(1),
+  .results thead th:nth-child(2),
+  .results thead th:nth-child(5),
+  .results thead th:nth-child(3) {
+    display: none;
+  }
+
+  .results tbody td:nth-child(1),
+  .results tbody td:nth-child(2),
+  .results tbody td:nth-child(5),
+  .results tbody td:nth-child(3) {
+    display: none;
+  }
+
+
+  /* Ocultar columnas Fee (3), Car (5) y Actions (6) */
+  .bookings thead th:nth-child(4) {
+    display: none;
+  }
+
+  .bookings tbody td:nth-child(4) {
+    display: none;
+  }
+
+  /* Muestra Actions siempre */
+  .bookings th:nth-child(6),
+  .bookings td:nth-child(6) {
+    display: table-cell !important;
+  }
+
+.publicName {
+  flex: 0 0 30%; /* ocupa 30% del row */
+  box-sizing: border-box;
+}
+
+.publicBio {
+  flex: 0 0 70%; /* ocupa 70% del row */
+  box-sizing: border-box;
+}
 }

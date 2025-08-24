@@ -5,8 +5,8 @@
     <title>My Rides</title>
     <link rel="stylesheet" href="../css/style.css" />
     <script src="../js/rides.js" defer></script>
-    <script src="../js/mostrarRides.js" defer></script>
-
+    <script src="../js/nav-bar.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -14,10 +14,11 @@
 
     <!-- Navbar -->
     <nav class="navbar">
+        <button class="navbar-toggle" id="navbar-toggle">☰</button>
         <ul class="navbar-menu">
             <li><a href="home.html">Home</a></li>
             <li><a href="myRides.html" class="active">Rides</a></li>
-            <li><a href="bookings.html">Bookings</a></li>
+            <li><a href="../Rides/booking.html">Bookings</a></li>
         </ul>
 
         <input type="search" placeholder="Search rides..." class="search-bar" />
@@ -37,15 +38,15 @@
         <a href="add.html" class="my-button margin-left-60">New Ride</a>
 
         <br><br>
-        <div class="content-wrapper">
+        <div class="results">
             <table class="bookings">
                 <thead>
                     <tr>
                         <th>From</th>
                         <th>To</th>
+                        <th>Fee</th>
                         <th>Seats</th>
                         <th>Car</th>
-                        <th>Fee</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -55,7 +56,7 @@
             </table>
         </div>
     </main>
-
+    
     <footer class="site-footer">
         <p>
             <a href="home.html">Home</a> |

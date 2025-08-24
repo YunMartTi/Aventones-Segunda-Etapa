@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Bookings</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/booking.js"></script>
+    <script src="../js/nav-bar.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
     <img src="../imagenes/logoAventones.png" alt="Logo" class="logo logo-login" />
 
     <!-- Navbar -->
     <nav class="navbar">
+        <button class="navbar-toggle" id="navbar-toggle">☰</button>
         <ul class="navbar-menu">
             <li><a href="home.html">Home</a></li>
             <li><a href="myRides.html">Rides</a></li>
@@ -39,15 +45,8 @@
                         <th>Accept / Reject</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Yunior Martinez</td>
-                        <td>Pital - Ciudad Quesada</td>
-                        <td>
-                            <a href="#">Accept</a> |
-                            <a href="#">Reject</a>
-                        </td>
-                    </tr>
+                <tbody id="bookingsTableBody">
+                    <!-- Aquí se cargan las solicitudes dinámicamente -->
                 </tbody>
             </table>
         </div>
@@ -65,4 +64,5 @@
         <p>© Aventones.com</p>
     </footer>
 </body>
+
 </html>

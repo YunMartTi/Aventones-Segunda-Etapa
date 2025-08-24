@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <title>Home</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/nav-bar.js"></script>
 </head>
 
 <body>
@@ -12,12 +14,12 @@
 
     <!-- Navbar -->
     <nav class="navbar">
+        <button class="navbar-toggle" id="navbar-toggle">☰</button>
         <ul class="navbar-menu">
             <li><a href="../Rides/home.html" class="active">Home</a></li>
             <li><a href="../Rides/myRides.html">Rides</a></li>
             <li><a href="../Rides/booking.html">Bookings</a></li>
         </ul>
-
         <input type="search" placeholder="Search rides..." class="search-bar" />
 
         <div class="dropdown">
@@ -87,8 +89,13 @@
         </div>
 
         <div class="map-box">
-            <img src="../imagenes/imgMapa.png" alt="Map" class="map-img" />
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.208823456!2d-84.4330585!3d10.3271418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa050fe3e77f3f1%3A0x63c4028e53f3d7f2!2sQuesada%2C%20San%20Carlos!5e0!3m2!1ses!2scr!4v1690981234567!5m2!1ses!2scr"
+                width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
+
     </main>
 
     <footer class="site-footer">
