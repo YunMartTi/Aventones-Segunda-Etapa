@@ -672,3 +672,71 @@ h2 {
   box-sizing: border-box;
 }
 }
+
+/* Estilos para iPad Pro*/
+@media (min-width: 1024px) and (max-width: 1366px) {
+
+  .form-row {
+    flex-direction: row; 
+    gap: 20px;
+  }
+
+  .form-footer {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: left;
+  }
+
+  .publicName {
+    flex: 0 0 35%;
+    box-sizing: border-box;
+  }
+
+  .publicBio {
+    flex: 0 0 65%;
+    box-sizing: border-box;
+  }
+
+  .navbar-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .navbar-menu li a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .search-bar {
+    display: inline-block;
+    width: 250px;
+  }
+
+  .results table {
+    width: 95%;
+  }
+
+  .results td,
+  .results th {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .results tr {
+    display: table-row; /* mostrar como tabla normal */
+    grid-template-columns: none;
+    margin-bottom: 0;
+  }
+
+  .results td::before {
+    content: none; /* quitar labels en tablet grande */
+  }
+
+  .bookings th,
+  .bookings td {
+    display: table-cell; /* mostrar todas las columnas */
+  }
+}
